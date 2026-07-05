@@ -1,11 +1,22 @@
 'use client';
 
+import HeroTop from './hero/HeroTop';
+import HeroImage from './hero/HeroImage';
+import HeroStats from './hero/HeroStats';
+
 export default function Hero() {
   return (
-    <section className="h-[600px] bg-red-600 flex items-center justify-center">
-      <h1 className="text-7xl font-bold text-white">
-        HERO TEST
-      </h1>
-    </section>
+    <>
+      <section className="bg-white">
+        <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
+          <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
+            <HeroTop />
+            <HeroImage />
+          </div>
+        </div>
+      </section>
+
+      <HeroStats />
+    </>
   );
 }
