@@ -4,6 +4,7 @@ import Company from '@/components/Company';
 import Services from '@/components/Services';
 import WhyChoose from '@/components/WhyChoose';
 import BusinessCases from '@/components/BusinessCases';
+import ContactCTA from '@/components/ContactCTA';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -20,6 +21,8 @@ export default function Home() {
       <WhyChoose />
 
       <BusinessCases />
+
+      <ContactCTA />
 
       <Footer />
     </main>
