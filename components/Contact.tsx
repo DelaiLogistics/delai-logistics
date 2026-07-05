@@ -11,17 +11,17 @@ const contactItems = [
   {
     icon: MapPin,
     title: '公司地址',
-    value: '湖南省长沙市',
+    value: '湖南省长沙市雨花区大桥三区6栋南三单元',
   },
   {
     icon: Phone,
     title: '联系电话',
-    value: '0731-84605086',
+    value: '0731-84685086',
   },
   {
     icon: Mail,
-    title: '邮箱',
-    value: 'info@delai56.com',
+    title: '客服邮箱',
+    value: 'service@dlccl.com',
   },
 ];
 
