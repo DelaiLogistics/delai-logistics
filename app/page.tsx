@@ -1,29 +1,27 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Company from "@/components/Company";
-import Services from "@/components/Services";
-import WhyChoose from "@/components/WhyChoose";
-import ServiceProcess from "@/components/ServiceProcess";
-import TransportNetwork from "@/components/TransportNetwork";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import Company from '@/components/Company';
+import Services from '@/components/Services';
+import WhyChoose from '@/components/WhyChoose';
+import BusinessCases from '@/components/BusinessCases';
+import Footer from '@/components/Footer';
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <>
+    <main className="bg-white">
       <Header />
 
-      <main>
-        <Hero />
-        <Company />
-        <Services />
-        <WhyChoose />
-        <ServiceProcess />
-        <TransportNetwork />
-        <Contact />
-      </main>
+      <Hero />
+
+      <Company />
+
+      <Services />
+
+      <WhyChoose />
+
+      <BusinessCases />
 
       <Footer />
-    </>
+    </main>
   );
 }
