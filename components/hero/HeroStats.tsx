@@ -4,25 +4,25 @@ import { heroData } from './heroData';
 
 export default function HeroStats() {
   return (
-    <div className="mx-auto mt-12 grid max-w-6xl grid-cols-2 gap-4 lg:grid-cols-4">
+    <section className="bg-white pb-20">
+      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-6 lg:grid-cols-4 lg:px-8">
 
-      {heroData.stats.map((item) => (
+        {heroData.stats.map((item) => (
+          <div
+            key={item.label}
+            className="rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+          >
+            <div className="text-4xl font-bold text-[#0F5EA8] md:text-5xl">
+              {item.value}
+            </div>
 
-        <div
-          key={item.label}
-          className="rounded-2xl border border-white/10 bg-white/10 p-6 text-center backdrop-blur"
-        >
-          <div className="text-3xl font-bold text-white md:text-4xl">
-            {item.value}
+            <div className="mt-3 text-base font-medium text-slate-500">
+              {item.label}
+            </div>
           </div>
+        ))}
 
-          <div className="mt-2 text-sm tracking-wide text-blue-100">
-            {item.label}
-          </div>
-        </div>
-
-      ))}
-
-    </div>
+      </div>
+    </section>
   );
 }
