@@ -4,7 +4,7 @@ import { heroData } from './heroData';
 
 export default function HeroStats() {
   return (
-    <section className="bg-white pb-20">
+    <section className="bg-red-500 pb-20">
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-6 lg:grid-cols-4 lg:px-8">
 
         {heroData.stats.map((item) => (
