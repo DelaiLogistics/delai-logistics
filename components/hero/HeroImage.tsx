@@ -4,18 +4,23 @@ import Image from 'next/image';
 
 export default function HeroImage() {
   return (
-    <div className="relative">
+    <div className="relative w-full">
 
-      <div className="overflow-hidden rounded-[32px] shadow-2xl">
+      {/* 整体向左移动一点，不贴右边 */}
+      <div className="-ml-6 xl:-ml-10">
 
-        <Image
-          src="/hero10.jpg"
-          alt="德莱物流"
-          width={1600}
-          height={1000}
-          priority
-          className="w-full object-cover"
-        />
+        <div className="overflow-hidden rounded-[38px] bg-white shadow-2xl">
+
+          <Image
+            src="/hero10_banner.jpg"
+            alt="德莱物流"
+            width={1800}
+            height={1125}
+            priority
+            className="w-full h-auto object-contain"
+          />
+
+        </div>
 
       </div>
 

@@ -6,53 +6,71 @@ import { heroData } from './heroData';
 
 export default function HeroTop() {
   return (
-    <div className="text-center lg:text-left">
+    <div className="pl-10 xl:pl-14">
 
-      <div className="inline-flex items-center rounded-full bg-orange-100 px-4 py-2">
-        <span className="mr-2 h-2 w-2 rounded-full bg-orange-500"></span>
+      {/* Badge */}
+      <div className="inline-flex items-center rounded-full bg-orange-100 px-6 py-3">
+        <span className="mr-3 h-2.5 w-2.5 rounded-full bg-orange-500"></span>
 
-        <span className="text-sm font-semibold tracking-wider text-orange-600">
+        <span className="text-base font-semibold tracking-wide text-orange-600">
           {heroData.badge}
         </span>
       </div>
 
-      <h1 className="mt-8 text-4xl font-bold leading-tight text-slate-900 md:text-6xl">
+      {/* Title */}
+      <h1 className="mt-10 text-[72px] font-extrabold leading-[1.05] tracking-[-0.04em] text-slate-900">
         {heroData.title1}
+
         <br />
-        <span className="text-[#0F5EA8]">
+
+        <span className="text-[#1565C0] whitespace-nowrap">
           {heroData.title2}
         </span>
       </h1>
 
-      <p className="mx-auto mt-8 max-w-2xl text-lg leading-9 text-slate-600 lg:mx-0">
-        {heroData.description}
-      </p>
+      {/* Description */}
+      <div className="mt-10 max-w-[560px] space-y-2 text-[20px] leading-[2] text-slate-600">
+        <p>
+          成立于2013年，总部位于湖南长沙。专注冷链运输、
+        </p>
 
-      <div className="mt-10 flex justify-center lg:justify-start">
-        <div className="flex items-center gap-3 rounded-full border border-slate-200 bg-white px-6 py-4 shadow-md">
+        <p>
+          国内空运、汽运配送及仓储服务，重点打造北京、
+        </p>
 
-          <Phone className="h-6 w-6 text-orange-500" />
+        <p>
+          上海、西安、海南四大冷链专线。
+        </p>
+      </div>
 
-          <span className="text-2xl font-bold text-slate-900">
+      {/* Phone */}
+      <div className="mt-12">
+        <div className="inline-flex h-[76px] items-center rounded-full border border-slate-200 bg-white px-10 shadow-xl">
+
+          <Phone className="mr-5 h-8 w-8 text-orange-500" />
+
+          <span className="text-[28px] font-bold tracking-wide text-slate-900">
             {heroData.phone}
           </span>
 
         </div>
       </div>
 
-      <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
+      {/* Buttons */}
+      <div className="mt-12 flex gap-6">
 
         <Link
           href="/contact"
-          className="flex items-center justify-center rounded-xl bg-orange-500 px-8 py-4 text-lg font-semibold text-white transition hover:bg-orange-600"
+          className="flex h-[66px] min-w-[220px] items-center justify-center rounded-2xl bg-orange-500 text-xl font-semibold text-white transition hover:bg-orange-600"
         >
           立即咨询
-          <ArrowRight className="ml-2 h-5 w-5" />
+
+          <ArrowRight className="ml-3 h-6 w-6" />
         </Link>
 
         <Link
           href="/contact"
-          className="flex items-center justify-center rounded-xl border border-slate-300 px-8 py-4 text-lg font-semibold text-slate-800 transition hover:bg-slate-100"
+          className="flex h-[66px] min-w-[220px] items-center justify-center rounded-2xl border border-slate-300 bg-white text-xl font-semibold text-slate-800 transition hover:bg-slate-50"
         >
           联系我们
         </Link>
