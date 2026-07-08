@@ -32,26 +32,67 @@ const strategy = [
 
 export default function CompanyStrategy() {
   return (
-    <div className="grid gap-6 md:grid-cols-2">
+    <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
       {strategy.map((item) => {
         const Icon = item.icon;
 
         return (
           <div
             key={item.title}
-            className="group rounded-3xl border border-slate-200 bg-white p-8 transition duration-300 hover:-translate-y-2 hover:border-orange-200 hover:shadow-2xl"
+            className="
+              group
+              rounded-3xl
+              border
+              border-slate-200
+              bg-white
+              p-6
+              shadow-sm
+              transition-all
+              duration-300
+              hover:-translate-y-2
+              hover:border-orange-200
+              hover:shadow-xl
+              sm:p-8
+            "
           >
-            <div className="flex items-start gap-5">
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-orange-50 transition group-hover:bg-orange-500">
+            <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
+              <div
+                className="
+                  flex
+                  h-16
+                  w-16
+                  shrink-0
+                  items-center
+                  justify-center
+                  rounded-2xl
+                  bg-orange-50
+                  transition
+                  group-hover:bg-orange-500
+                "
+              >
                 <Icon className="h-8 w-8 text-orange-500 transition group-hover:text-white" />
               </div>
 
-              <div>
-                <h3 className="text-xl font-bold leading-8 text-slate-900">
+              <div className="flex-1">
+                <h3
+                  className="
+                    text-2xl
+                    font-bold
+                    leading-tight
+                    text-slate-900
+                  "
+                >
                   {item.title}
                 </h3>
 
-                <p className="mt-3 leading-8 text-slate-600">
+                <p
+                  className="
+                    mt-4
+                    text-base
+                    leading-8
+                    text-slate-600
+                  "
+                >
                   {item.desc}
                 </p>
               </div>
