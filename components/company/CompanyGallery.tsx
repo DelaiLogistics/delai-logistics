@@ -35,7 +35,7 @@ export default function CompanyGallery() {
         </span>
 
         <h3 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-          德莱物流业务现场
+          🔥🔥🔥 德莱物流业务现场 TEST
         </h3>
 
         <div className="mx-auto mt-5 h-1 w-16 rounded-full bg-orange-500" />
@@ -66,15 +66,12 @@ export default function CompanyGallery() {
                 "
               />
 
-              {/* 渐变遮罩 */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
 
-              {/* 标签 */}
               <div className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-[11px] font-bold tracking-[0.18em] text-orange-500 backdrop-blur sm:left-5 sm:top-5 sm:px-4 sm:py-2 sm:text-xs">
                 {item.tag}
               </div>
 
-              {/* 标题 */}
               <div className="absolute bottom-5 left-5">
                 <h4 className="text-xl font-bold text-white sm:text-2xl">
                   {item.title}
