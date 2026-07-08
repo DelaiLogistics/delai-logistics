@@ -10,8 +10,8 @@ import {
 const strategy = [
   {
     icon: Target,
-    title: '★★★★★测试★★★★★',
-    desc: '如果这里变了，说明手机已经加载了最新代码。',
+    title: '五年战略规划',
+    desc: '持续完善直营网点布局，提升数字化运营能力，打造现代化物流企业。',
   },
   {
     icon: Trophy,
@@ -39,19 +39,71 @@ export default function CompanyStrategy() {
         return (
           <div
             key={item.title}
-            className="group rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-orange-200 hover:shadow-xl lg:p-8"
+            className="
+              group
+              rounded-3xl
+              border
+              border-slate-200
+              bg-white
+              p-5
+              shadow-sm
+              transition-all
+              duration-300
+              hover:-translate-y-1
+              hover:border-orange-200
+              hover:shadow-xl
+              sm:p-6
+              lg:p-8
+            "
           >
-            <div className="flex items-start gap-5">
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-orange-50 transition-all duration-300 group-hover:bg-orange-500">
-                <Icon className="h-8 w-8 text-orange-500 transition-all duration-300 group-hover:text-white" />
+            <div className="flex items-start gap-4 sm:gap-5">
+              {/* Icon */}
+              <div
+                className="
+                  flex
+                  h-14
+                  w-14
+                  shrink-0
+                  items-center
+                  justify-center
+                  rounded-2xl
+                  bg-orange-50
+                  transition-all
+                  duration-300
+                  group-hover:bg-orange-500
+                  sm:h-16
+                  sm:w-16
+                "
+              >
+                <Icon className="h-7 w-7 text-orange-500 transition-all duration-300 group-hover:text-white sm:h-8 sm:w-8" />
               </div>
 
+              {/* Text */}
               <div className="min-w-0 flex-1">
-                <h3 className="text-[28px] font-bold leading-[1.25] tracking-[-0.02em] text-slate-900">
+                <h3
+                  className="
+                    text-xl
+                    font-bold
+                    leading-snug
+                    text-slate-900
+                    sm:text-2xl
+                    lg:text-[28px]
+                  "
+                >
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-[17px] leading-8 text-slate-600">
+                <p
+                  className="
+                    mt-2
+                    text-[15px]
+                    leading-7
+                    text-slate-600
+                    sm:mt-3
+                    sm:text-base
+                    sm:leading-8
+                  "
+                >
                   {item.desc}
                 </p>
               </div>

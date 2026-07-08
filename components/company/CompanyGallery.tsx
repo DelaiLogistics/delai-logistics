@@ -27,22 +27,36 @@ const gallery = [
 
 export default function CompanyGallery() {
   return (
-    <div className="mt-16 lg:mt-24">
-      <div className="mb-8 lg:mb-10">
-        <span className="text-xs font-semibold tracking-[0.22em] text-orange-500 sm:text-sm">
+    <section className="mt-16 lg:mt-24">
+      {/* Section Header */}
+      <div className="mb-8 text-center lg:mb-10">
+        <span className="inline-block rounded-full bg-orange-50 px-4 py-2 text-xs font-semibold tracking-[0.22em] text-orange-500 sm:text-sm">
           BUSINESS SCENARIOS
         </span>
 
-        <h3 className="mt-2 text-3xl font-bold text-slate-900 sm:mt-3 sm:text-4xl">
+        <h3 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
           德莱物流业务现场
         </h3>
+
+        <div className="mx-auto mt-5 h-1 w-16 rounded-full bg-orange-500" />
       </div>
 
-      <div className="grid gap-5 sm:gap-6 md:grid-cols-2 xl:grid-cols-4">
+      {/* Gallery */}
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
         {gallery.map((item) => (
           <div
             key={item.title}
-            className="group overflow-hidden rounded-[24px] bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-xl"
+            className="
+              group
+              overflow-hidden
+              rounded-3xl
+              bg-white
+              shadow-md
+              transition-all
+              duration-500
+              hover:-translate-y-2
+              hover:shadow-2xl
+            "
           >
             <div className="relative overflow-hidden">
               <Image
@@ -57,18 +71,21 @@ export default function CompanyGallery() {
                   transition-transform
                   duration-700
                   group-hover:scale-110
-                  sm:h-[260px]
-                  lg:h-72
+                  sm:h-[250px]
+                  lg:h-[280px]
                 "
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
 
-              <div className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-[11px] font-bold tracking-[0.18em] text-orange-500 sm:left-6 sm:top-6 sm:px-4 sm:py-2 sm:text-xs">
+              {/* Tag */}
+              <div className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-[11px] font-bold tracking-[0.18em] text-orange-500 backdrop-blur sm:left-5 sm:top-5 sm:px-4 sm:py-2 sm:text-xs">
                 {item.tag}
               </div>
 
-              <div className="absolute bottom-5 left-5 sm:bottom-6 sm:left-6">
+              {/* Title */}
+              <div className="absolute bottom-5 left-5">
                 <h4 className="text-xl font-bold text-white sm:text-2xl">
                   {item.title}
                 </h4>
@@ -77,6 +94,6 @@ export default function CompanyGallery() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
