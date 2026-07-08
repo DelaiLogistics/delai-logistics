@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const navItems = [
   { name: '首页', href: '#' },
@@ -18,153 +18,149 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 8);
     handleScroll();
-
     window.addEventListener('scroll', handleScroll);
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = open ? 'hidden' : 'auto';
+    document.body.style.overflow = open ? 'hidden' : '';
   }, [open]);
 
   return (
     <>
       <header
-        className={`fixed left-0 top-0 z-50 w-full transition-all duration-300 ${
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
           scrolled
             ? 'bg-white/95 shadow-lg backdrop-blur-xl'
             : 'bg-white/90 backdrop-blur-lg'
         }`}
       >
-        <div className="mx-auto flex h-16 md:h-[72px] max-w-7xl items-center justify-between px-4 md:px-6 lg:px-8">
-          {/* Logo */}
-          <Link href="/" className="flex items-center group">
+        <div className="mx-auto flex h-[64px] lg:h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+
+          <Link href="/" className="flex items-center">
             <Image
               src="/logo.svg"
               alt="德莱物流"
-              width={220}
-              height={56}
+              width={200}
+              height={52}
               priority
-              className="h-10 md:h-12 lg:h-14 w-auto transition-transform duration-300 group-hover:scale-110"
+              className="h-9 sm:h-10 lg:h-12 w-auto"
             />
           </Link>
 
-          {/* PC Nav */}
-          <nav className="hidden items-center gap-1 lg:flex">
+          <nav className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="relative px-4 py-2 text-sm font-medium text-slate-700 transition-all duration-300 hover:text-blue-600 group"
+                className="relative px-4 py-2 text-sm font-medium text-slate-700 transition hover:text-blue-600 group"
               >
                 {item.name}
-                <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-blue-600 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                <span className="absolute left-4 right-4 bottom-0 h-0.5 scale-x-0 rounded-full bg-blue-600 transition-transform duration-300 group-hover:scale-x-100" />
               </a>
             ))}
           </nav>
 
-          {/* Right */}
           <div className="hidden lg:flex items-center gap-3">
             <a
               href="#contact"
-              className="px-6 py-2.5 rounded-lg text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors duration-300"
+              className="px-6 py-2.5 rounded-lg text-sm font-semibold text-slate-700 hover:text-blue-600 transition"
             >
               在线咨询
             </a>
+
             <a
               href="#contact"
-              className="px-6 py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 text-white text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+              className="rounded-lg bg-blue-600 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-700"
             >
               获取报价
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setOpen(true)}
-            className="rounded-lg p-2 text-slate-700 lg:hidden hover:bg-slate-100 transition-colors duration-300"
+            className="flex h-11 w-11 items-center justify-center rounded-xl lg:hidden hover:bg-slate-100"
           >
-            <Menu size={24} />
+            <Menu size={28} />
           </button>
         </div>
       </header>
 
       {/* Mobile Drawer */}
+
       <div
-        className={`fixed inset-0 z-[60] lg:hidden transition-all duration-300 ${
+        className={`fixed inset-0 z-[60] lg:hidden transition ${
           open ? 'visible opacity-100' : 'invisible opacity-0'
         }`}
       >
         <div
-          className="absolute inset-0 bg-black/40 backdrop-blur-sm"
           onClick={() => setOpen(false)}
+          className="absolute inset-0 bg-black/40 backdrop-blur-sm"
         />
 
-        <div
-          className={`absolute right-0 top-0 h-full w-[80%] max-w-sm bg-white shadow-2xl transition-transform duration-300 ${
+        <aside
+          className={`absolute right-0 top-0 flex h-full w-[84%] max-w-[360px] flex-col bg-white transition-transform duration-300 ${
             open ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          {/* Mobile Header */}
-          <div className="flex h-16 items-center justify-between border-b border-slate-200 px-4">
+          <div className="flex h-16 items-center justify-between border-b px-5">
             <Image
               src="/logo.svg"
               alt="德莱物流"
               width={170}
               height={42}
-              className="h-10 w-auto"
+              className="h-9 w-auto"
             />
 
             <button
               onClick={() => setOpen(false)}
-              className="rounded-lg p-2 text-slate-700 hover:bg-slate-100 transition-colors duration-300"
+              className="flex h-10 w-10 items-center justify-center rounded-lg hover:bg-slate-100"
             >
               <X size={24} />
             </button>
           </div>
 
-          {/* Mobile Nav */}
-          <nav className="px-4 py-6 space-y-1">
+          <nav className="flex-1 px-5 py-6">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="block px-4 py-3 rounded-lg text-base font-medium text-slate-700 transition-all duration-300 hover:bg-blue-50 hover:text-blue-600"
+                className="block rounded-xl px-4 py-4 text-[17px] font-medium text-slate-700 transition hover:bg-blue-50 hover:text-blue-600"
               >
                 {item.name}
               </a>
             ))}
           </nav>
 
-          {/* Mobile CTA */}
-          <div className="absolute bottom-8 left-4 right-4 space-y-3">
+          <div
+            className="space-y-3 border-t p-5"
+            style={{
+              paddingBottom: 'max(20px, env(safe-area-inset-bottom))',
+            }}
+          >
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="flex h-12 items-center justify-center rounded-lg border-2 border-slate-200 text-slate-700 font-semibold transition-all duration-300 hover:border-blue-600 hover:text-blue-600"
+              className="flex h-12 items-center justify-center rounded-xl border text-slate-700 font-semibold"
             >
               在线咨询
             </a>
+
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="flex h-12 items-center justify-center rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+              className="flex h-12 items-center justify-center rounded-xl bg-blue-600 text-white font-semibold"
             >
               获取报价
             </a>
           </div>
-        </div>
+        </aside>
       </div>
 
-      {/* Spacer */}
-      <div className="h-16 md:h-[72px]" />
+      <div className="h-[64px] lg:h-[72px]" />
     </>
   );
 }
