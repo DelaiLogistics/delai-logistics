@@ -32,7 +32,7 @@ const strategy = [
 
 export default function CompanyStrategy() {
   return (
-    <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
+    <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
       {strategy.map((item) => {
         const Icon = item.icon;
 
@@ -41,28 +41,27 @@ export default function CompanyStrategy() {
             key={item.title}
             className="
               group
-              rounded-3xl
+              rounded-[28px]
               border
               border-slate-200
               bg-white
-              p-5
+              p-6
               shadow-sm
               transition-all
               duration-300
-              hover:-translate-y-1
+              hover:-translate-y-2
               hover:border-orange-200
               hover:shadow-xl
-              sm:p-6
               lg:p-8
             "
           >
-            <div className="flex items-start gap-4 sm:gap-5">
+            <div className="flex items-start gap-5">
               {/* Icon */}
               <div
                 className="
                   flex
-                  h-14
-                  w-14
+                  h-16
+                  w-16
                   shrink-0
                   items-center
                   justify-center
@@ -71,39 +70,18 @@ export default function CompanyStrategy() {
                   transition-all
                   duration-300
                   group-hover:bg-orange-500
-                  sm:h-16
-                  sm:w-16
                 "
               >
-                <Icon className="h-7 w-7 text-orange-500 transition-all duration-300 group-hover:text-white sm:h-8 sm:w-8" />
+                <Icon className="h-8 w-8 text-orange-500 transition-all duration-300 group-hover:text-white" />
               </div>
 
-              {/* Text */}
+              {/* Content */}
               <div className="min-w-0 flex-1">
-                <h3
-                  className="
-                    text-xl
-                    font-bold
-                    leading-snug
-                    text-slate-900
-                    sm:text-2xl
-                    lg:text-[28px]
-                  "
-                >
+                <h3 className="text-2xl font-bold leading-tight text-slate-900 lg:text-[28px]">
                   {item.title}
                 </h3>
 
-                <p
-                  className="
-                    mt-2
-                    text-[15px]
-                    leading-7
-                    text-slate-600
-                    sm:mt-3
-                    sm:text-base
-                    sm:leading-8
-                  "
-                >
+                <p className="mt-3 text-base leading-8 text-slate-600">
                   {item.desc}
                 </p>
               </div>
