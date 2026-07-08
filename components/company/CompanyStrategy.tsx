@@ -10,8 +10,8 @@ import {
 const strategy = [
   {
     icon: Target,
-    title: '五年战略规划',
-    desc: '持续完善直营网点布局，提升数字化运营能力，打造现代化物流企业。',
+    title: '★★★★★测试★★★★★',
+    desc: '如果这里变了，说明手机已经加载了最新代码。',
   },
   {
     icon: Trophy,
@@ -32,67 +32,26 @@ const strategy = [
 
 export default function CompanyStrategy() {
   return (
-    <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+    <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
       {strategy.map((item) => {
         const Icon = item.icon;
 
         return (
           <div
             key={item.title}
-            className="
-              group
-              rounded-3xl
-              border
-              border-slate-200
-              bg-white
-              p-6
-              shadow-sm
-              transition-all
-              duration-300
-              hover:-translate-y-2
-              hover:border-orange-200
-              hover:shadow-xl
-              sm:p-8
-            "
+            className="group rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-orange-200 hover:shadow-xl lg:p-8"
           >
-            <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
-              <div
-                className="
-                  flex
-                  h-16
-                  w-16
-                  shrink-0
-                  items-center
-                  justify-center
-                  rounded-2xl
-                  bg-orange-50
-                  transition
-                  group-hover:bg-orange-500
-                "
-              >
-                <Icon className="h-8 w-8 text-orange-500 transition group-hover:text-white" />
+            <div className="flex items-start gap-5">
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-orange-50 transition-all duration-300 group-hover:bg-orange-500">
+                <Icon className="h-8 w-8 text-orange-500 transition-all duration-300 group-hover:text-white" />
               </div>
 
-              <div className="flex-1">
-                <h3
-                  className="
-                    text-2xl
-                    font-bold
-                    leading-tight
-                    text-slate-900
-                  "
-                >
+              <div className="min-w-0 flex-1">
+                <h3 className="text-[28px] font-bold leading-[1.25] tracking-[-0.02em] text-slate-900">
                   {item.title}
                 </h3>
 
-                <p
-                  className="
-                    mt-4
-                    text-base
-                    leading-8
-                    text-slate-600
-                  "
-                >
+                <p className="mt-3 text-[17px] leading-8 text-slate-600">
                   {item.desc}
                 </p>
               </div>
