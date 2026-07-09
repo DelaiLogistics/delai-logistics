@@ -32,7 +32,7 @@ const strategy = [
 
 export default function CompanyStrategy() {
   return (
-    <div className="grid grid-cols-2 gap-4 lg:gap-6">
+    <div className="grid grid-cols-2 gap-5 lg:grid-cols-2 lg:gap-6">
       {strategy.map((item) => {
         const Icon = item.icon;
 
@@ -41,69 +41,52 @@ export default function CompanyStrategy() {
             key={item.title}
             className="
               group
-              rounded-2xl
+              rounded-[28px]
               border
               border-slate-200
               bg-white
-              p-4
+              p-5
               shadow-sm
               transition-all
               duration-300
               hover:-translate-y-2
               hover:border-orange-200
               hover:shadow-xl
-
-              sm:p-6
-              lg:rounded-[28px]
               lg:p-8
             "
           >
-            <div className="flex flex-col items-start gap-3 sm:flex-row sm:gap-5">
+            <div className="flex flex-col h-full">
+
               {/* Icon */}
               <div
                 className="
                   flex
-                  h-12
-                  w-12
-                  shrink-0
+                  h-16
+                  w-16
                   items-center
                   justify-center
-                  rounded-xl
+                  rounded-2xl
                   bg-orange-50
                   transition-all
                   duration-300
                   group-hover:bg-orange-500
-
-                  sm:h-16
-                  sm:w-16
-                  sm:rounded-2xl
                 "
               >
-                <Icon
-                  className="
-                    h-6
-                    w-6
-                    text-orange-500
-                    transition-all
-                    duration-300
-                    group-hover:text-white
-
-                    sm:h-8
-                    sm:w-8
-                  "
-                />
+                <Icon className="h-8 w-8 text-orange-500 transition-all duration-300 group-hover:text-white" />
               </div>
 
-              {/* Content */}
-              <div className="min-w-0 flex-1">
-                <h3 className="text-base font-bold leading-snug text-slate-900 sm:text-xl lg:text-[28px]">
+              {/* Title */}
+              <div className="mt-6 flex h-[92px] items-start lg:h-[88px]">
+                <h3 className="text-[20px] font-bold leading-tight text-slate-900 lg:text-[28px]">
                   {item.title}
                 </h3>
-
-                <p className="mt-2 text-xs leading-5 text-slate-600 sm:mt-3 sm:text-base sm:leading-7 lg:leading-8">
-                  {item.desc}
-                </p>
               </div>
+
+              {/* Description */}
+              <p className="text-base leading-8 text-slate-600">
+                {item.desc}
+              </p>
+
             </div>
           </div>
         );

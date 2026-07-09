@@ -7,37 +7,37 @@ const cases = [
     image: '/case1.jpg',
     tag: '国内空运',
     title: '高效直达 · 安全准时',
-    desc: '快速响应，保障货物时效。',
+    desc: '快速响应，保障时效',
   },
   {
     image: '/case2.jpg',
     tag: '仓储服务',
     title: '专业仓储 · 智能管理',
-    desc: '标准化仓储管理，保障货物安全。',
+    desc: '标准仓储，货物安全',
   },
   {
     image: '/case3.jpg',
     tag: '汽运配送',
     title: '全国运输 · 安全可靠',
-    desc: '覆盖全国运输网络，高效配送。',
+    desc: '全国运输，高效配送',
   },
   {
     image: '/case4.jpg',
     tag: '冷链运输',
     title: '全程温控 · 品质保障',
-    desc: '全程温控运输，保障生鲜品质。',
+    desc: '全程温控，品质保障',
   },
   {
     image: '/case5.jpg',
     tag: '机场装机',
     title: '专业装卸 · 高效作业',
-    desc: '规范流程，确保货物安全装机。',
+    desc: '规范装卸，安全作业',
   },
   {
     image: '/case6.jpg',
     tag: '运输现场',
     title: '真实业务 · 客户信赖',
-    desc: '每一次运输，都是客户的信任托付。',
+    desc: '客户信赖，全程护航',
   },
 ];
 
@@ -65,6 +65,7 @@ export default function BusinessCases() {
             真实业务 · 真实现场 · 每一次运输，
             都是客户对德莱物流的信任托付。
           </p>
+
         </div>
 
         {/* Gallery */}
@@ -77,7 +78,7 @@ export default function BusinessCases() {
               className="group overflow-hidden rounded-2xl shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl lg:rounded-[28px]"
             >
 
-              <div className="relative h-[180px] sm:h-[260px] lg:h-[330px] overflow-hidden">
+              <div className="relative h-[180px] overflow-hidden sm:h-[260px] lg:h-[330px]">
 
                 <Image
                   src={item.image}
@@ -86,8 +87,8 @@ export default function BusinessCases() {
                   className="object-cover transition duration-700 group-hover:scale-110"
                 />
 
-                {/* 黑色渐变 */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+                {/* 渐变 */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
                 {/* 标签 */}
                 <div className="absolute left-3 top-3 rounded-full bg-orange-500 px-2 py-1 text-[10px] font-semibold text-white sm:left-4 sm:top-4 sm:px-3 sm:py-1.5 sm:text-xs lg:left-6 lg:top-6 lg:px-4 lg:py-2 lg:text-sm">
@@ -97,11 +98,11 @@ export default function BusinessCases() {
                 {/* 底部文字 */}
                 <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 lg:bottom-6 lg:left-6 lg:right-6">
 
-                  <h3 className="text-base font-bold leading-snug text-white sm:text-xl lg:text-3xl">
+                  <h3 className="text-[15px] font-bold leading-tight text-white sm:text-xl lg:text-3xl">
                     {item.title}
                   </h3>
 
-                  <p className="mt-2 text-[11px] leading-4 text-white/90 sm:text-sm sm:leading-6 lg:mt-3 lg:text-base lg:leading-7">
+                  <p className="mt-2 whitespace-nowrap text-[10px] leading-none text-white/90 sm:text-sm lg:text-base">
                     {item.desc}
                   </p>
 
