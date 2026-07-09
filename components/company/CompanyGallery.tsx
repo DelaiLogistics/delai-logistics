@@ -28,52 +28,41 @@ const gallery = [
 export default function CompanyGallery() {
   return (
     <section className="mt-16 lg:mt-24">
-      {/* 标题 */}
-      <div className="mb-8 text-center lg:mb-10">
-        <span className="inline-flex items-center rounded-full border border-orange-100 bg-orange-50 px-4 py-2 text-xs font-semibold tracking-[0.22em] text-orange-600 sm:text-sm">
+      <div className="mb-8 text-center lg:mb-12">
+        <span className="inline-flex items-center rounded-full border border-orange-200 bg-orange-50 px-4 py-2 text-xs font-semibold tracking-[0.2em] text-orange-600 sm:text-sm">
           BUSINESS SCENARIOS
         </span>
 
-        <h3 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-          🔥🔥🔥 德莱物流业务现场 TEST
+        <h3 className="mt-4 text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
+          德莱物流业务现场
         </h3>
 
         <div className="mx-auto mt-5 h-1 w-16 rounded-full bg-orange-500" />
       </div>
 
-      {/* 图片 */}
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:gap-8">
         {gallery.map((item) => (
           <div
             key={item.title}
-            className="group overflow-hidden rounded-[28px] bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+            className="group overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
           >
-            <div className="relative overflow-hidden">
+            <div className="relative">
               <Image
                 src={item.image}
                 alt={item.title}
                 width={700}
                 height={700}
-                className="
-                  h-[220px]
-                  w-full
-                  object-cover
-                  transition-transform
-                  duration-700
-                  group-hover:scale-110
-                  sm:h-[250px]
-                  lg:h-[280px]
-                "
+                className="aspect-[4/5] w-full object-cover transition duration-700 group-hover:scale-110 lg:aspect-[5/4]"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
 
-              <div className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-[11px] font-bold tracking-[0.18em] text-orange-500 backdrop-blur sm:left-5 sm:top-5 sm:px-4 sm:py-2 sm:text-xs">
+              <div className="absolute left-2 top-2 rounded-full bg-white/95 px-3 py-1 text-[10px] font-bold tracking-[0.18em] text-orange-500 shadow sm:left-4 sm:top-4 sm:px-4 sm:py-2 sm:text-xs lg:left-6 lg:top-6 lg:px-5 lg:py-2.5 lg:text-sm">
                 {item.tag}
               </div>
 
-              <div className="absolute bottom-5 left-5">
-                <h4 className="text-xl font-bold text-white sm:text-2xl">
+              <div className="absolute bottom-3 left-3 sm:bottom-5 sm:left-5 lg:bottom-6 lg:left-6">
+                <h4 className="text-lg font-bold text-white sm:text-2xl lg:text-4xl">
                   {item.title}
                 </h4>
               </div>
