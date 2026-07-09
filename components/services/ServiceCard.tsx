@@ -33,7 +33,7 @@ const services = [
 
 export default function ServiceCard() {
   return (
-    <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+    <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
       {services.map((item) => {
         const Icon = item.icon;
 
@@ -42,17 +42,21 @@ export default function ServiceCard() {
             key={item.title}
             className="
               group
-              rounded-[28px]
+              flex
+              h-full
+              flex-col
+              rounded-[26px]
               border
               border-slate-200
               bg-white
-              p-6
-              shadow-sm
+              p-4
+              shadow-md
               transition-all
               duration-300
               hover:-translate-y-2
               hover:border-orange-200
               hover:shadow-2xl
+              sm:p-5
               lg:p-8
             "
           >
@@ -60,8 +64,8 @@ export default function ServiceCard() {
             <div
               className="
                 flex
-                h-14
-                w-14
+                h-12
+                w-12
                 items-center
                 justify-center
                 rounded-2xl
@@ -73,21 +77,21 @@ export default function ServiceCard() {
                 lg:w-16
               "
             >
-              <Icon className="h-7 w-7 text-orange-500 transition-all duration-300 group-hover:text-white lg:h-8 lg:w-8" />
+              <Icon className="h-6 w-6 text-orange-500 transition-all duration-300 group-hover:text-white lg:h-8 lg:w-8" />
             </div>
 
             {/* Title */}
-            <h3 className="mt-6 text-xl font-bold text-slate-900 lg:mt-8 lg:text-2xl">
+            <h3 className="mt-5 text-lg font-bold text-slate-900 lg:mt-8 lg:text-2xl">
               {item.title}
             </h3>
 
             {/* Description */}
-            <p className="mt-4 text-[15px] leading-7 text-slate-600 lg:mt-5 lg:text-base lg:leading-8">
+            <p className="mt-3 flex-1 text-sm leading-6 text-slate-600 lg:mt-5 lg:text-base lg:leading-8">
               {item.desc}
             </p>
 
             {/* Link */}
-            <div className="mt-6 inline-flex items-center text-sm font-semibold text-orange-500 transition-all duration-300 group-hover:translate-x-1 lg:mt-8 lg:text-base">
+            <div className="mt-5 inline-flex items-center text-sm font-semibold text-orange-500 transition-all duration-300 group-hover:translate-x-1 lg:mt-8 lg:text-base">
               了解更多
               <ArrowRight className="ml-2 h-4 w-4" />
             </div>
