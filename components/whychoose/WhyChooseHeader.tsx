@@ -2,23 +2,24 @@
 
 export default function WhyChooseHeader() {
   return (
-    <div className="mx-auto mb-20 max-w-3xl text-center">
-      <div className="inline-flex items-center rounded-full bg-orange-50 px-5 py-2">
+    <div className="mx-auto mb-14 max-w-4xl text-center lg:mb-20">
+      <div className="inline-flex items-center rounded-full border border-orange-100 bg-orange-50 px-4 py-2 sm:px-5">
         <span className="mr-2 h-2 w-2 rounded-full bg-orange-500" />
 
-        <span className="text-sm font-semibold tracking-[0.2em] text-orange-600">
-          WHY CHOOSE DELAI
+        <span className="text-xs font-semibold tracking-[0.22em] text-orange-600 sm:text-sm">
+          WHY CHOOSE US
         </span>
       </div>
 
-      <h2 className="mt-8 text-5xl font-bold text-slate-900">
+      <h2 className="mt-6 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl lg:mt-8 lg:text-6xl">
         为什么选择德莱物流
       </h2>
 
-      <p className="mt-8 text-lg leading-9 text-slate-600">
-        十余年专注冷链运输、国内空运、汽运配送及仓储服务，
-        打造安全、高效、稳定的一站式供应链物流解决方案，
-        持续为客户创造更高价值。
+      <div className="mx-auto mt-6 h-1 w-16 rounded-full bg-orange-500 lg:mt-8 lg:w-20" />
+
+      <p className="mx-auto mt-8 max-w-3xl text-base leading-8 text-slate-600 sm:text-lg sm:leading-9">
+        十余年冷链物流经验，覆盖全国运输网络，以专业团队、高效运输和稳定服务，
+        为客户提供安全可靠的一站式物流解决方案。
       </p>
     </div>
   );

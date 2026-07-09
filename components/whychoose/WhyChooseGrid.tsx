@@ -47,11 +47,10 @@ export default function WhyChooseGrid() {
     <div
       className="
         grid
-        grid-cols-1
-        gap-6
-        sm:grid-cols-2
+        grid-cols-2
+        gap-4
         lg:grid-cols-3
-        xl:grid-cols-3
+        lg:gap-6
       "
     >
       {advantages.map((item) => {
@@ -69,7 +68,7 @@ export default function WhyChooseGrid() {
               border
               border-slate-200
               bg-white
-              p-6
+              p-4
               shadow-sm
               transition-all
               duration-300
@@ -77,33 +76,49 @@ export default function WhyChooseGrid() {
               hover:border-orange-200
               hover:shadow-xl
 
-              sm:p-7
+              sm:p-6
               lg:p-8
             "
           >
             <div
               className="
                 flex
-                h-16
-                w-16
+                h-12
+                w-12
                 items-center
                 justify-center
                 rounded-2xl
                 bg-orange-50
                 transition
                 group-hover:bg-orange-500
+
+                sm:h-16
+                sm:w-16
               "
             >
-              <Icon className="h-8 w-8 text-orange-500 transition group-hover:text-white" />
+              <Icon
+                className="
+                  h-6
+                  w-6
+                  text-orange-500
+                  transition
+                  group-hover:text-white
+
+                  sm:h-8
+                  sm:w-8
+                "
+              />
             </div>
 
             <h3
               className="
-                mt-6
-                text-xl
+                mt-4
+                text-base
                 font-bold
                 text-slate-900
 
+                sm:mt-6
+                sm:text-xl
                 lg:text-2xl
               "
             >
@@ -112,11 +127,15 @@ export default function WhyChooseGrid() {
 
             <p
               className="
-                mt-4
+                mt-3
                 flex-1
-                text-[15px]
-                leading-7
+                text-xs
+                leading-5
                 text-slate-600
+
+                sm:mt-4
+                sm:text-[15px]
+                sm:leading-7
 
                 lg:text-base
                 lg:leading-8

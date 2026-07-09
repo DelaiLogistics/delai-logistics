@@ -43,29 +43,31 @@ export default function ServiceCard() {
             className="
               group
               flex
-              h-full
+              min-h-[300px]
+              lg:min-h-[420px]
               flex-col
-              rounded-[26px]
+              rounded-[28px]
               border
               border-slate-200
               bg-white
-              p-4
+              p-5
+              lg:p-8
               shadow-md
               transition-all
               duration-300
               hover:-translate-y-2
               hover:border-orange-200
               hover:shadow-2xl
-              sm:p-5
-              lg:p-8
             "
           >
             {/* Icon */}
             <div
               className="
                 flex
-                h-12
-                w-12
+                h-14
+                w-14
+                lg:h-16
+                lg:w-16
                 items-center
                 justify-center
                 rounded-2xl
@@ -73,27 +75,25 @@ export default function ServiceCard() {
                 transition-all
                 duration-300
                 group-hover:bg-orange-500
-                lg:h-16
-                lg:w-16
               "
             >
-              <Icon className="h-6 w-6 text-orange-500 transition-all duration-300 group-hover:text-white lg:h-8 lg:w-8" />
+              <Icon className="h-7 w-7 lg:h-8 lg:w-8 text-orange-500 transition-all duration-300 group-hover:text-white" />
             </div>
 
             {/* Title */}
-            <h3 className="mt-5 text-lg font-bold text-slate-900 lg:mt-8 lg:text-2xl">
+            <h3 className="mt-6 text-xl lg:text-2xl font-bold text-slate-900">
               {item.title}
             </h3>
 
             {/* Description */}
-            <p className="mt-3 flex-1 text-sm leading-6 text-slate-600 lg:mt-5 lg:text-base lg:leading-8">
+            <p className="mt-4 flex-1 text-[15px] leading-8 text-slate-600">
               {item.desc}
             </p>
 
-            {/* Link */}
-            <div className="mt-5 inline-flex items-center text-sm font-semibold text-orange-500 transition-all duration-300 group-hover:translate-x-1 lg:mt-8 lg:text-base">
+            {/* Button */}
+            <div className="mt-auto pt-8 inline-flex items-center text-base font-semibold text-orange-500 transition-all duration-300 group-hover:translate-x-1">
               了解更多
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <ArrowRight className="ml-2 h-5 w-5" />
             </div>
           </div>
         );
