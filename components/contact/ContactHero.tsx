@@ -30,7 +30,7 @@ export default function ContactHero() {
           <div className="mt-12 flex flex-col items-center justify-center gap-5 sm:flex-row">
 
             <a
-              href="tel:073184685086"
+              href="tel:4008007556"
               className="flex h-14 items-center rounded-2xl bg-orange-500 px-8 text-lg font-semibold text-white transition hover:bg-orange-600"
             >
               立即拨打电话

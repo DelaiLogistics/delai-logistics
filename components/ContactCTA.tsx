@@ -38,7 +38,7 @@ export default function ContactCTA() {
               <Phone className="mr-3 h-5 w-5 text-orange-400 sm:h-6 sm:w-6" />
 
               <span className="text-xl font-bold tracking-wide text-white sm:text-2xl">
-                0731-84685086
+                4008007556
               </span>
 
             </div>
@@ -47,7 +47,7 @@ export default function ContactCTA() {
             <div className="mt-10 flex flex-col gap-4 sm:mt-12 sm:flex-row sm:justify-center">
 
               <a
-                href="tel:073184685086"
+                href="tel:4008007556"
                 className="flex h-14 w-full items-center justify-center rounded-2xl bg-orange-500 px-8 text-lg font-semibold text-white transition hover:bg-orange-600 sm:w-auto sm:px-10"
               >
                 立即咨询
