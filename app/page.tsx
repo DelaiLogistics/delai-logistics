@@ -22,7 +22,9 @@ export default function Home() {
 
       <BusinessCases />
 
-      <ContactCTA />
+      <section id="contact">
+        <ContactCTA />
+      </section>
 
       <Footer />
     </main>

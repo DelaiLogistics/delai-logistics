@@ -38,7 +38,6 @@ export default function Header() {
         }`}
       >
         <div className="mx-auto flex h-[64px] lg:h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-
           <Link href="/" className="flex items-center">
             <Image
               src="/logo.svg"
@@ -55,10 +54,10 @@ export default function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="relative px-4 py-2 text-sm font-medium text-slate-700 transition hover:text-blue-600 group"
+                className="group relative px-4 py-2 text-sm font-medium text-slate-700 transition hover:text-blue-600"
               >
                 {item.name}
-                <span className="absolute left-4 right-4 bottom-0 h-0.5 scale-x-0 rounded-full bg-blue-600 transition-transform duration-300 group-hover:scale-x-100" />
+                <span className="absolute bottom-0 left-4 right-4 h-0.5 scale-x-0 rounded-full bg-blue-600 transition-transform duration-300 group-hover:scale-x-100" />
               </a>
             ))}
           </nav>
@@ -66,13 +65,13 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-3">
             <a
               href="#contact"
-              className="px-6 py-2.5 rounded-lg text-sm font-semibold text-slate-700 hover:text-blue-600 transition"
+              className="rounded-lg px-6 py-2.5 text-sm font-semibold text-slate-700 transition hover:text-blue-600"
             >
               在线咨询
             </a>
 
             <a
-              href="#contact"
+              href="tel:4008007556"
               className="rounded-lg bg-blue-600 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-700"
             >
               获取报价
@@ -81,7 +80,7 @@ export default function Header() {
 
           <button
             onClick={() => setOpen(true)}
-            className="flex h-11 w-11 items-center justify-center rounded-xl lg:hidden hover:bg-slate-100"
+            className="flex h-11 w-11 items-center justify-center rounded-xl hover:bg-slate-100 lg:hidden"
           >
             <Menu size={28} />
           </button>
@@ -91,7 +90,7 @@ export default function Header() {
       {/* Mobile Drawer */}
 
       <div
-        className={`fixed inset-0 z-[60] lg:hidden transition ${
+        className={`fixed inset-0 z-[60] transition lg:hidden ${
           open ? 'visible opacity-100' : 'invisible opacity-0'
         }`}
       >
@@ -144,15 +143,15 @@ export default function Header() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="flex h-12 items-center justify-center rounded-xl border text-slate-700 font-semibold"
+              className="flex h-12 items-center justify-center rounded-xl border font-semibold text-slate-700"
             >
               在线咨询
             </a>
 
             <a
-              href="#contact"
+              href="tel:4008007556"
               onClick={() => setOpen(false)}
-              className="flex h-12 items-center justify-center rounded-xl bg-blue-600 text-white font-semibold"
+              className="flex h-12 items-center justify-center rounded-xl bg-blue-600 font-semibold text-white"
             >
               获取报价
             </a>
